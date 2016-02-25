@@ -4,6 +4,10 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'board-card-retro',
     environment: environment,
+    contentSecurityPolicy: {
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com"
+    },
+    firebase: 'https://board-card-retro.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
